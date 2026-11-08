@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alishba Zulfiqar | Computer Engineer and Web Developer in Islamabad</title>
+<meta name="description" content="Alishba Zulfiqar is a Computer Engineering student at Bahria University, Islamabad. She builds websites and helps small businesses grow online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1E3A8A; --navy-deep:#142A66; --gold:#F59E0B; --white:#F8FAFC;
+  --bg:#F8FAFC; --surface:#FFFFFF; --ink:#0F1B3D; --muted:#4A5675; --line:#DCE3F2;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0B1530;--surface:#111F45;--ink:#EAF0FF;--muted:#A8B4D6;--line:#243562;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0B1530;--surface:#111F45;--ink:#EAF0FF;--muted:#A8B4D6;--line:#243562;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+
+/* hero */
+.hero{background:var(--navy);color:var(--white);padding-bottom:5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1rem;flex-wrap:wrap}
+header.top b{font-family:var(--display);font-weight:800;font-size:1.15rem}
+header.top b i{font-style:normal;color:var(--gold)}
+nav a{margin-left:1.25rem;text-decoration:none;color:#C9D6F5;font-weight:500}
+nav a:hover{color:var(--gold)}
+.badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid rgba(248,250,252,.3);padding:.4rem .9rem;border-radius:999px;font-size:.95rem;color:#DCE6FF;margin:3rem 0 1.5rem}
+.badge::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.75rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 1.5rem;max-width:16ch}
+.hero h1 span{display:block;color:var(--gold);font-size:.52em;letter-spacing:-.01em;margin-bottom:.6rem}
+.hero p.lead{font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:46ch;margin:0 0 1.25rem;color:#E3EBFF}
+.hero p.focus{max-width:56ch;margin:0 0 2.25rem;color:#B9C8F0;font-size:1rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:2px solid var(--gold);transition:transform .15s}
+.btn.fill{background:var(--gold);color:var(--navy-deep)}
+.btn.line{color:var(--white);border-color:rgba(248,250,252,.55)}
+.btn.line:hover{border-color:var(--gold);color:var(--gold)}
+.btn:hover{transform:translateY(-2px)}
+.btn.outline-navy{color:var(--ink);border-color:var(--navy)}
+
+/* sections */
+section{padding:4rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.02em;margin:0 0 .75rem;line-height:1.1}
+h2::after{content:"";display:block;width:3rem;height:4px;background:var(--gold);margin-top:.75rem;border-radius:2px}
+.intro{color:var(--muted);max-width:56ch;margin:1rem 0 2rem}
+.about{display:grid;gap:2rem;grid-template-columns:1fr;margin-top:1.75rem}
+@media(min-width:48rem){.about{grid-template-columns:1.4fr 1fr}}
+.about p{max-width:60ch;margin:0 0 1rem}
+.edu{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:.75rem;padding:1.5rem;align-self:start}
+.edu h3{font-family:var(--display);margin:0 0 .35rem;font-size:1.2rem;line-height:1.25}
+.edu p{margin:0;color:var(--muted)}
+.empty{border:2px dashed var(--line);border-radius:.75rem;padding:2.5rem 1.5rem;text-align:center;color:var(--muted);margin-top:1.5rem}
+.empty strong{display:block;color:var(--ink);font-family:var(--display);font-size:1.2rem;margin-bottom:.25rem}
+.can{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.25rem}
+@media(min-width:48rem){.can{grid-template-columns:1fr 1fr}}
+.can li{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:.75rem;padding:1.5rem}
+.can strong{display:block;font-family:var(--display);font-size:1.2rem;margin-bottom:.35rem}
+.can span{color:var(--muted)}
+.skills{display:grid;gap:1.5rem;margin-top:2rem}
+@media(min-width:48rem){.skills{grid-template-columns:repeat(3,1fr)}}
+.skills h3{font-family:var(--display);font-size:1.1rem;margin:0 0 .75rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--surface);padding:.35rem .85rem;border-radius:.5rem;font-weight:500;font-size:.98rem}
+.steps{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1rem;counter-reset:s}
+@media(min-width:48rem){.steps{grid-template-columns:repeat(5,1fr)}}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.25rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--gold);color:var(--navy-deep);font-weight:800;margin-bottom:.75rem}
+.steps strong{display:block;font-family:var(--display);margin-bottom:.25rem}
+.steps span{color:var(--muted);font-size:.97rem}
+
+/* contact */
+.contact{background:var(--navy);color:var(--white);border-top:0;margin-top:2rem}
+.contact h2::after{background:var(--gold)}
+.contact p{max-width:48ch;color:#D3DEF8;margin:1rem 0 1.75rem}
+.contact dl{display:grid;gap:.25rem 1.5rem;grid-template-columns:auto 1fr;margin:2rem 0 0;color:#D3DEF8}
+.contact dt{color:var(--gold);font-weight:600}
+.contact dd{margin:0}
+footer{background:var(--navy-deep);color:#9FB0DD;padding:1.5rem 0 2rem;font-size:.95rem}
+@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <header class="top">
+      <b>Alishba <i>Zulfiqar</i></b>
+      <nav aria-label="Main"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+    </header>
+    <div class="badge">Available for freelance projects</div>
+    <h1><span>Hi, I’m Alishba.</span>I build websites that help businesses get found.</h1>
+    <p class="lead">I help small businesses get online, look professional and reach more customers.</p>
+    <p class="focus">Focus: websites, Instagram growth, social media ads, and AI projects. Based in Islamabad, Pakistan.</p>
+    <div class="btns">
+      <a class="btn fill" href="#contact">Get in touch</a>
+      <a class="btn line" href="#services">What I can do</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div>
+        <p>I’m a Computer Engineering undergraduate who learns by building. I started my degree in September 2023, and I enjoy turning ideas into things people can actually use.</p>
+        <p>I lead my final year project team, so I’m used to planning work, sharing tasks and delivering on time. I explain things in plain language, because good technology should be easy to use.</p>
+      </div>
+      <div class="edu">
+        <h3>Bachelor of Computer Engineering</h3>
+        <p>Bahria University, Islamabad</p>
+        <p>Started September 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>My work</h2>
+    <!-- Projects go here later. Copy a block when you have one. -->
+    <div class="empty"><strong>Projects coming soon</strong>I’m working on new projects and will add them here.</div>
+  </section>
+
+  <section id="services">
+    <h2>What I can do for you</h2>
+    <p class="intro">Everything a small business needs to get online and grow, from one person.</p>
+    <ul class="can">
+      <li><strong>Website design and development</strong><span>Simple, fast sites for shops and small businesses, set up so customers can find you on Google.</span></li>
+      <li><strong>Instagram growth</strong><span>Page setup, offers, posts and reels that bring in more followers and customers.</span></li>
+      <li><strong>Ads</strong><span>Instagram ads that fit your budget, with clear reports on what worked.</span></li>
+      <li><strong>AI and AR projects</strong><span>Chatbots, support agents and AR experiences for businesses that want to stand out.</span></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills and tools</h2>
+    <!-- Edit these lists to match what you really know -->
+    <div class="skills">
+      <div><h3>Build</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li></ul></div>
+      <div><h3>AI</h3><ul class="tags"><li>AI agents</li><li>Augmented reality</li></ul></div>
+      <div><h3>Marketing and design</h3><ul class="tags"><li>Instagram</li><li>Meta Ads</li><li>SEO basics</li><li>Canva</li><li>CapCut</li></ul></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How we’ll work together</h2>
+    <ol class="steps">
+      <li><strong>Talk</strong><span>You tell me about your business and goals.</span></li>
+      <li><strong>Plan</strong><span>I suggest pages, content and a timeline.</span></li>
+      <li><strong>Design and build</strong><span>I create it and share progress with you.</span></li>
+      <li><strong>Launch</strong><span>Your site or page goes live.</span></li>
+      <li><strong>Support</strong><span>I keep it updated and growing.</span></li>
+    </ol>
+  </section>
+</main>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let’s work together</h2>
+    <p>Have a business that needs a website, a better Instagram or an AI idea? Send me a message.</p>
+    <div class="btns">
+      <!-- Replace with your real email and links -->
+      <a class="btn fill" href="mailto:your-email@example.com">Email me</a>
+      <a class="btn line" href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+      <a class="btn line" href="https://github.com/Alishba-zulfiqar">GitHub</a>
+    </div>
+    <dl>
+      <dt>Email</dt><dd>your-email@example.com</dd>
+      <dt>Location</dt><dd>Islamabad, Pakistan</dd>
+    </dl>
+  </div>
+</section>
+<footer><div class="wrap">© <span id="y">2026</span> Alishba Zulfiqar</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
