@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -12,7 +12,7 @@
 :root{
   /* COLOUR THEME: Deep Forest */
   --hero:#14231F; --hero2:#30423A; --foot:#0E1A17; --on-foot:#A9B5A7;
-  --accent:#F2A078; --accent-ink:#14231F; --brand:#30423A; --glow:#C9805C; --on-hero:#F5F0E6;
+  --accent:#F2A078; --accent-ink:#14231F; --brand:#30423A; --glow:#C9805C; --on-hero:#F5F0E6; --rust:#8C3B17;
   --bg:#F5F0E6; --surface:#FFFCF6; --ink:#14231F; --muted:#4D5E56; --line:#DDD6C4;
   --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -67,6 +67,25 @@ a{color:inherit}
 .btn.line{color:var(--on-hero);border-color:color-mix(in srgb,var(--on-hero) 50%,transparent)}
 .btn.line:hover{border-color:var(--accent);color:var(--accent)}
 .btn:hover{transform:translateY(-2px)}
+
+/* layered board in the hero */
+.stack{position:relative;max-width:46rem}
+.sheet{position:absolute;inset:0;border-radius:1.75rem;background:var(--glow);transform:translate(14px,16px) rotate(1.4deg);box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.board{position:relative;border-radius:1.75rem;padding:clamp(1.5rem,4vw,3rem);background:var(--accent);color:var(--accent-ink);overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
+.board::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(20,35,31,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(20,35,31,.14) 1px,transparent 1px);background-size:44px 44px}
+.board>*{position:relative;z-index:1}
+.board>.plus{position:absolute;font:600 1.1rem/1 var(--body);color:rgba(20,35,31,.55)}
+.plus.a{top:.7rem;left:.9rem}.plus.b{top:.7rem;right:.9rem}.plus.c{bottom:.7rem;left:.9rem}.plus.d{bottom:.7rem;right:.9rem}
+.hero .board .badge{border-color:rgba(20,35,31,.4);color:var(--accent-ink);background:rgba(255,255,255,.28)}
+.hero .board .badge::before{background:var(--accent-ink)}
+.hero .board h1 span{color:var(--rust)}
+.hero .board p.lead{color:var(--accent-ink)}
+.hero .board p.focus{color:color-mix(in srgb,var(--accent-ink) 78%,transparent)}
+.hero .board .btn.fill{background:var(--hero);color:var(--on-hero);border-color:var(--hero)}
+.hero .board .btn.line{background:transparent;color:var(--accent-ink);border-color:var(--accent-ink)}
+.hero .board .btn.line:hover{background:var(--accent-ink);color:var(--on-hero)}
+
 .strip{background:var(--hero2);color:color-mix(in srgb,var(--on-hero) 80%,transparent);border-bottom:1px solid color-mix(in srgb,var(--accent) 25%,transparent)}
 .strip ul{list-style:none;margin:0 auto;padding:1.1rem 1.5rem;max-width:64rem;display:flex;flex-wrap:wrap;gap:.6rem 2rem}
 .strip li::before{content:"";display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--accent);margin-right:.6rem;vertical-align:middle}
@@ -133,13 +152,19 @@ footer{background:var(--foot);color:var(--on-foot);padding:1.5rem 0 2rem;font-si
 
 <div class="hero" id="home">
   <div class="wrap">
-    <div class="badge">Available for freelance projects</div>
-    <h1><span>Hi, I’m Alishba.</span>I build websites that help businesses get found.</h1>
-    <p class="lead">I help small businesses get online, look professional and reach more customers.</p>
-    <p class="focus">Focus: websites, Instagram growth, social media ads, and AI projects. Based in Islamabad, Pakistan.</p>
-    <div class="btns">
-      <a class="btn fill" href="#contact">Get in touch</a>
-      <a class="btn line" href="#services">What I can do</a>
+    <div class="stack">
+      <div class="sheet" aria-hidden="true"></div>
+      <div class="board">
+        <span class="plus a" aria-hidden="true">+</span><span class="plus b" aria-hidden="true">+</span><span class="plus c" aria-hidden="true">+</span><span class="plus d" aria-hidden="true">+</span>
+        <div class="badge">Available for freelance projects</div>
+        <h1><span>Hi, I’m Alishba.</span>I build websites that help businesses get found.</h1>
+        <p class="lead">I help small businesses get online, look professional and reach more customers.</p>
+        <p class="focus">Focus: websites, Instagram growth, social media ads, and AI projects. Based in Islamabad, Pakistan.</p>
+        <div class="btns">
+          <a class="btn fill" href="#contact">Get in touch</a>
+          <a class="btn line" href="#services">What I can do</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
